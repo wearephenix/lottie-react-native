@@ -14,15 +14,15 @@ class ContainerView: RCTView {
     @objc var onAnimationFinish: RCTBubblingEventBlock?
     var animationView: AnimationView?
 
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        if #available(iOS 13.0, tvOS 13.0, *) {
-            if (self.traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
-                applyProperties()
-                print("dark mode changed")
-            }
-        }
-    }
+//     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+//         super.traitCollectionDidChange(previousTraitCollection)
+//         if #available(iOS 13.0, tvOS 13.0, *) {
+//             if (self.traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+//                 applyProperties()
+//                 print("dark mode changed")
+//             }
+//         }
+//     }
 
     @objc func setSpeed(_ newSpeed: CGFloat) {
         speed = newSpeed
